@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KalmKite - Meditation for Busy Professionals</title>
+    <style>
+        /* Basic Reset & Font */
+        :root {
+            --primary-color: #4A90E2; /* A calming blue */
+            --secondary-color: #50E3C2; /* A gentle mint green */
+            --dark-text: #333;
+            --light-text: #f9f9f9;
+            --background-color: #f4f7f6;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--dark-text);
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 0;
+            background: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            color: #555;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-text);
+        }
+
+        /* Features Section */
+        #features {
+            background: #fff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 2rem;
+            border-radius: 10px;
+            background: var(--background-color);
+        }
+
+        .feature-item h3 {
+            margin-top: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+            margin-top: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* CTA Section */
+        #cta {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+        }
+
+        #cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-text);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* Simple hide for mobile, can be replaced with a hamburger menu */
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">KalmKite</div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#cta">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Find Your Calm in the Corporate Chaos</h1>
+                <p>Short, guided meditations designed for your busy workday. Take a break, refocus, and boost your productivity with KalmKite.</p>
+                <a href="#" class="btn btn-primary">Download on the App Store</a>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title">Designed for Your Workday</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Quick Meditations</h3>
+                        <p>5-10 minute sessions that fit perfectly into your coffee break. Reset your mind without disrupting your schedule.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Work-Focused Topics</h3>
+                        <p>Meditations for pre-meeting focus, post-presentation unwinding, and managing workplace stress.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Soothing Soundscapes</h3>
+                        <p>Block out office noise with ambient sounds designed to improve concentration and create a calm workspace.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Professionals Are Saying</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p>"KalmKite has been a game-changer for my stressful afternoons. A quick 5-minute session helps me refocus for the rest of the day."</p>
+                        <div class="author">- Sarah J., Project Manager</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"I was skeptical about meditation, but the work-focused sessions are incredibly practical. The pre-meeting meditation is now part of my routine."</p>
+                        <div class="author">- Mark T., Lead Developer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <div class="container">
+                <h2>Ready to Transform Your Workday?</h2>
+                <a href="#" class="btn btn-primary">Get KalmKite Today</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 KalmKite. All rights reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
